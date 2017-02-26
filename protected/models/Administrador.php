@@ -57,7 +57,7 @@ class Administrador extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nivel' => 'Nivel',
-			'nome' => 'Nome',
+			'nome' => 'Author',
 			'email' => 'Email',
 			'usuario' => 'Usuario',
 			'senha' => 'Senha',

@@ -53,7 +53,7 @@ class Categoria extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nome' => 'Nome',
+			'nome' => 'Categoria',
 			'created_at' => 'Created At',
 		);
 	}

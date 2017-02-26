@@ -1,9 +1,6 @@
 <?php
 /* @var $this PostController */
 /* @var $data Post */
-$categorias = CHtml::listData(Categoria::model()->findAll(),'id','nome');
-$usuarios = CHtml::listData(Administrador::model()->findAll(),'id','usuario');
-
 ?>
 
 <div class="view">
@@ -21,11 +18,11 @@ $usuarios = CHtml::listData(Administrador::model()->findAll(),'id','usuario');
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('administrador_id')); ?>:</b>
-	<?php echo $usuarios[CHtml::encode($data->administrador_id)]; ?>
+	<?php echo CHtml::encode($data->author->nome); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('categoria_id')); ?>:</b>
-	<?php echo $categorias[CHtml::encode($data->categoria_id)]; ?>
+	<?php echo CHtml::encode($data->Categoria->nome); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>

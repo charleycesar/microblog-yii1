@@ -21,30 +21,30 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>300)); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>300,'class'=>'form-control')); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'conteudo'); ?>
-		<?php echo $form->textField($model,'conteudo',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->textArea($model,'conteudo',array('rows'=>4,'class'=>'form-control')); ?>
 		<?php echo $form->error($model,'conteudo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'administrador_id'); ?>
-		<?php echo $form->dropDownList($model,'administrador_id',CHtml::listData(Administrador::model()->findAll(),'id','nome')); ?>
+		<?php echo $form->dropDownList($model,'administrador_id',CHtml::listData(Administrador::model()->findAll(),'id','nome'),['class'=>'form-control']); ?>
 		<?php echo $form->error($model,'administrador_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'categoria_id'); ?>
-		<?php echo $form->dropDownList($model,'categoria_id',CHtml::listData(Categoria::model()->findAll(),'id','nome')); ?>
+		<?php echo $form->dropDownList($model,'categoria_id',CHtml::listData(Categoria::model()->findAll(),'id','nome'),['class'=>'form-control']); ?>
 		<?php echo $form->error($model,'categoria_id'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',['class'=>'btn btn-primary']); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

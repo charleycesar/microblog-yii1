@@ -42,14 +42,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'post-grid',
+	'itemsCssClass' =>	'table table-border',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'titulo',
 		'conteudo',
-		'administrador_id',
-		'categoria_id',
+		'author.nome',
+		'Categoria.nome',
 		'created_at',
 		array(
 			'class'=>'CButtonColumn',
