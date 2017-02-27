@@ -26,6 +26,6 @@ $this->menu=array(
 		'conteudo',
 		'author.nome',
 		'Categoria.nome',
-		'created_at',
+		'created_time',
 	),
 )); ?>

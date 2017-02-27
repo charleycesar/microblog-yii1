@@ -51,7 +51,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'conteudo',
 		'author.nome',
 		'Categoria.nome',
-		'created_at',
+		'created_time',
 		array(
 			'class'=>'CButtonColumn',
 		),

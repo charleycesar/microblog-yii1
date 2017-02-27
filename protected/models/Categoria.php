@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'categorias':
  * @property string $id
  * @property string $nome
- * @property string $created_at
+ * @property string $created_time
  */
 class Categoria extends CActiveRecord
 {
@@ -28,10 +28,10 @@ class Categoria extends CActiveRecord
 		return array(
 			array('nome', 'required'),
 			array('nome', 'length', 'max'=>300),
-			array('created_at', 'safe'),
+			array('created_time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nome, created_at', 'safe', 'on'=>'search'),
+			array('id, nome, created_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ class Categoria extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nome' => 'Categoria',
-			'created_at' => 'Created At',
+			'created_time' => 'Created At',
 		);
 	}
 
@@ -78,7 +78,7 @@ class Categoria extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nome',$this->nome,true);
-		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('created_time',$this->created_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

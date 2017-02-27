@@ -38,7 +38,7 @@ class Post extends CActiveRecord
 			array('conteudo', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, titulo, conteudo, administrador_id, categoria_id, created_at', 'safe', 'on'=>'search'),
+			array('id, titulo, conteudo, administrador_id, categoria_id, created_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class Post extends CActiveRecord
 			'conteudo' => 'Conteudo',
 			'administrador_id' => 'Administrador',
 			'categoria_id' => 'Categoria',
-			'created_at' => 'Data',
+			'created_time' => 'Data',
 		);
 	}
 
@@ -93,7 +93,7 @@ class Post extends CActiveRecord
 		$criteria->compare('conteudo',$this->conteudo,true);
 		$criteria->compare('administrador_id',$this->administrador_id);
 		$criteria->compare('categoria_id',$this->categoria_id);
-		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('created_time',$this->created_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
