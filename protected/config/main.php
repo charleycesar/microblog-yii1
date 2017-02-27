@@ -33,7 +33,9 @@ return array(
 
 	// application components
 	'components'=>array(
-
+		'fixture'=>[
+			'class'=>'system.test.CDbFixtureManager',
+		],
 		'user'=>array(
 			'class' => 'application.components.UserLevel',
 			// enable cookie-based authentication
